@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponentComponent implements OnInit {
 
   loadState = 'loading';
-  username = '';
+  username: string;
 
-  onButtonClick(event: Event) {
+  onButtonClick() {
     this.loadState === 'loading' ? this.loadState = 'finished' : this.loadState = 'loading';
   }
 
