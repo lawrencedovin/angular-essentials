@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
+import { CustomEventsComponent } from './custom-events/custom-events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    CustomEventsComponent
   ],
   imports: [
     BrowserModule,

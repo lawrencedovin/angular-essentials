@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -10,6 +10,8 @@ export class UserComponent implements OnInit {
   username = "Enter Username";
   error = 'Username needs 6 characters minimum.';
   showError = false;
+
+  @Input() message: string;
 
   constructor() {}
 
