@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  message = "hello from user!";
+
+  constructor() {}
+
+  onUserInput(event: Event) {
+      this.message = (event.target as HTMLInputElement).value;
+  }
 
   ngOnInit(): void {
   }
