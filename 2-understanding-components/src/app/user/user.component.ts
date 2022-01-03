@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  message = "hello from user!";
+  username = "Enter Username";
+  error = 'Username needs 6 characters minimum.';
+  showError = false;
 
   constructor() {}
 
   onUserInput(event: Event) {
-      this.message = (event.target as HTMLInputElement).value;
+      let inputValue = (event.target as HTMLInputElement).value;
+      this.username = inputValue;
+      inputValue.length < 7 ? this.showError = true : this.showError = false;
   }
 
   ngOnInit(): void {
