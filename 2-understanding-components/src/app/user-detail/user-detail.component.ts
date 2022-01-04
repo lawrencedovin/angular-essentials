@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.css']
 })
-export class UserDetailComponent implements OnInit {
+export class UserDetailComponent {
 
   user = {
     'name': 'Lawrence',
@@ -22,10 +22,5 @@ export class UserDetailComponent implements OnInit {
   }
 
   userDetails = this.generateUserDetails(this.user);
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
