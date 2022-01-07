@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { random } from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ export class AppComponent {
   number = 0;
 
   onAddOne() {
-    this.number += 1;
+    // this.number += 1;
+    this.number = random(1, 10);
   }
 }
