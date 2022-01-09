@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-for-loop.component.css']
 })
 export class NgForLoopComponent {
+  newItem = ''
   groceries = ['Apples', 'Grapes', 'Potatoes'];
 }
