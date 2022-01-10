@@ -3,8 +3,10 @@
   [ngClass]="{'btn-primary': newItem !== '', 'btn-default': newItem === '' }">
   Add Item
 </button>
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let item of groceries">
-    {{ item }}
+<ul>
+  <li
+    *ngFor="let item of groceries; let i = index"
+    [ngStyle]="{backgroundColor: backgroundColor(i)}">
+    {{i}} - {{ item }}
   </li>
 </ul>

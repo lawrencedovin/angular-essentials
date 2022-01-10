@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class NgForLoopComponent {
   newItem = ''
   groceries = ['Apples', 'Grapes', 'Potatoes'];
+  backgroundColor(i: number) {
+    return i % 2 === 0 ? '#42b883' : '#35495e';
+  }
 }
