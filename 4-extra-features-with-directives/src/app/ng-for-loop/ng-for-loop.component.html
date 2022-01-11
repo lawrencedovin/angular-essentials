@@ -3,6 +3,8 @@
   [ngClass]="{'btn-primary': newItem !== '', 'btn-default': newItem === '' }">
   Add Item
 </button>
+<button (click)="toggle(value)">toggle</button>
+<p *ngIf="value === true">Please enter a value!</p>
 <ul>
   <li
     *ngFor="let item of groceries; let i = index"

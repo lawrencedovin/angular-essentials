@@ -11,4 +11,9 @@ export class NgForLoopComponent {
   backgroundColor(i: number) {
     return i % 2 === 0 ? '#42b883' : '#35495e';
   }
+  value = true;
+  toggle(value: boolean){
+    this.value = value === true ? false : true;
+    return this.value;
+  }
 }
