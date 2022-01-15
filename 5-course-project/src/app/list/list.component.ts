@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -8,5 +8,10 @@ import { Component, Input } from '@angular/core';
 export class ListComponent {
   // Allows it to be set outside
   @Input() characters: any;
+  @Output() sideAssigned = new EventEmitter<{name: string, side: string}>();
+
+  onSideAssigned(charInfo: any) {
+    this.sideAssigned.emit(charInfo);
+  }
 
 }
