@@ -1,17 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements OnInit {
-
-  character: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ItemComponent{
+  @Input() character: any;
 }
