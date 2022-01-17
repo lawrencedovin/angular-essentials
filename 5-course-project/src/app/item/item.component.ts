@@ -11,6 +11,8 @@ export class ItemComponent{
 
   onAssign(side: string) {
     // this.character.side = side;
+
+    // Outputs the current character name and chosen side.
     this.sideAssigned.emit({name: this.character.name, side: side});
   }
 }
