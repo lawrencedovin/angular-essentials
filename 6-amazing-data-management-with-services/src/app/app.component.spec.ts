@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title '6-amazing-data-management-with-services'`, () => {
+  it(`should have as title '5-course-project'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('6-amazing-data-management-with-services');
+    expect(app.title).toEqual('5-course-project');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('6-amazing-data-management-with-services app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('5-course-project app is running!');
   });
 });
