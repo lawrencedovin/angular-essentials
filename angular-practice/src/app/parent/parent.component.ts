@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  items = ['Apple', 'Bananas', 'Grapes'];
+  // Parent initiates items which passes to child component
+  items = ['Guitar', 'Ukulele', 'Oud'];
 
+  // Method for receiving the Output from a child component and updating the items list
   addItem(event: string) {
-    this.items = [...this.items, event];
+    this.items = [...this.items, event]
   }
 
   constructor() { }

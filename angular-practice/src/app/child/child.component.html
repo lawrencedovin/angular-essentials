@@ -1,7 +1,7 @@
 <ul>
-  <li *ngFor="let i of items">{{ i }}</li>
+  <li *ngFor="let item of items">{{ item }}</li>
 </ul>
-
-<input type="text" [(ngModel)]="item">
-<p>{{ item }}</p>
-<button (click)="addItemClick()">Submit</button>
+<input type="text" [(ngModel)]="item" (input)="onUserInput($event)">
+<p>Add new item: {{ item }}</p>
+<p *ngIf="showError" style="color: red">{{ error }}</p>
+<button (click)="addItemClick()" id="addItemButton">Add New Item</button>
