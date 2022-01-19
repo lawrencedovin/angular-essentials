@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "7-handling-user-input-forms": {
+    "5-course-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/7-handling-user-input-forms",
+            "outputPath": "dist/5-course-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "7-handling-user-input-forms:build:production"
+              "browserTarget": "5-course-project:build:production"
             },
             "development": {
-              "browserTarget": "7-handling-user-input-forms:build:development"
+              "browserTarget": "5-course-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "7-handling-user-input-forms:build"
+            "browserTarget": "5-course-project:build"
           }
         },
         "test": {
@@ -102,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "7-handling-user-input-forms"
+  "defaultProject": "5-course-project"
 }

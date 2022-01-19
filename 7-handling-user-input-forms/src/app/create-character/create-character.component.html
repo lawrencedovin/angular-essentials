@@ -1,0 +1,15 @@
+<form>
+  <div class="mb-3">
+    <label for="name" class="form-label">Character Name</label>
+    <input class="form-control" type="text" id="name" name="name">
+  </div>
+  <div class="mb-3">
+    <label for="side" class="form-label">Choose Side</label>
+    <select id="side" name="side" class="form-select">
+      <option *ngFor="let side of availableSides" [value]="side.value">
+        {{ side.display }}
+      </option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit">Add Character</button>
+</form>

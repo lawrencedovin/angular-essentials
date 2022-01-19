@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/7-handling-user-input-forms'),
+      dir: require('path').join(__dirname, './coverage/5-course-project'),
       subdir: '.',
       reporters: [
         { type: 'html' },
