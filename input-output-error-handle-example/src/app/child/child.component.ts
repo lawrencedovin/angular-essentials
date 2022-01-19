@@ -24,7 +24,7 @@ export class ChildComponent implements OnInit {
   showError = false;
   error = "Item can't be more than 10 characters long.";
 
-  resetButtonAndShowError(addItemButton: HTMLButtonElement, showError: boolean, disabled: boolean) {
+  setButtonAndShowError(addItemButton: HTMLButtonElement, showError: boolean, disabled: boolean) {
     addItemButton.disabled = disabled;
     this.showError = disabled;
   }
@@ -34,8 +34,8 @@ export class ChildComponent implements OnInit {
     let inputValue = (event.target as HTMLInputElement).value;
     let addItemButton = (document.querySelector("#addItemButton") as HTMLButtonElement);
     (inputValue.length > 10)
-    ? this.resetButtonAndShowError(addItemButton, this.showError, true)
-    : this.resetButtonAndShowError(addItemButton, this.showError, false)
+    ? this.setButtonAndShowError(addItemButton, this.showError, true)
+    : this.setButtonAndShowError(addItemButton, this.showError, false)
   }
 
   // Button click triggers sending new item to parent component
