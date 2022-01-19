@@ -1,10 +1,17 @@
 import { Person } from "./interfaces/person.interface";
+import { LogService } from "./log.service";
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class StarWarsService {
   private characters = [
     { name: 'Luke Skywalker', side: '' },
     { name: 'Darth Vader', side: '' }
   ];
+
+  constructor(private logService: LogService) {}
 
   getCharacters(chosenList: string) {
     if(chosenList === 'all') {
@@ -16,22 +23,12 @@ export class StarWarsService {
   }
 
   onSideChosen(characterInformation: Person) {
-    // Loops through characters list returning the Index where the
-    // character's name matches the passed in characterInformation
+    let {name, side} = characterInformation;
     const position = this.characters.findIndex((chararacter) => {
-      return chararacter.name === characterInformation.name;
+      return chararacter.name === name;
     })
-    // Once the character in the list is matched to the passed in characterInformation
-    // the character is then updated to the chosen side which was clicked.
-    // in item.ts
-    // onSideChosen(side: string) {
-    //   this.starWarsService.onSideChosen({name: this.character.name, side: side});
-    // }
-    // this.character.name in item.ts is inputted by the list component when looping the characters.
-    // the characters in list component is inputted by the tabs componet.
-    // the tabs component gets the character list from the star-wars.service.ts's getCharacters method
-    // which return a list of filtered characters by their side.
-
-    this.characters[position].side = characterInformation.side;
+    this.characters[position].side = side;
+    // Using logService
+    this.logService.writeLog(`Changed side of: ${name}, new side: ${side}`);
   }
 }
