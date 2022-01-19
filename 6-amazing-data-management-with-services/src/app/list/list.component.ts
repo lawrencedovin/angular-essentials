@@ -1,5 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Person } from '../interfaces/person.interface';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -7,12 +6,6 @@ import { Person } from '../interfaces/person.interface';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent {
-  // Allows it to be set outside
+  // Gets characters from tabs
   @Input() characters: any;
-  @Output() sideAssigned = new EventEmitter<Person>();
-
-  onSideAssigned(charInfo: any) {
-    this.sideAssigned.emit(charInfo);
-  }
-
 }

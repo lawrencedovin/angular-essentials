@@ -29,8 +29,8 @@ export class StarWarsService {
     // }
     // this.character.name in item.ts is inputted by the list component when looping the characters.
     // the characters in list component is inputted by the tabs componet.
-    // the tabs component gets the character list from the star-wars.service.ts's getCharacters method.
-    // The getCharacters method is used to filter characters by their corresponding side.
+    // the tabs component gets the character list from the star-wars.service.ts's getCharacters method
+    // which return a list of filtered characters by their side.
 
     this.characters[position].side = characterInformation.side;
   }
