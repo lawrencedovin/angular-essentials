@@ -1,7 +1,8 @@
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
   <div class="mb-3">
     <label for="name" class="form-label">Character Name</label>
-    <input class="form-control" type="text" id="name" name="name" ngModel>
+    <input class="form-control" type="text" id="name" name="name" ngModel required>
+    <p *ngIf="isFormInvalid" style="color: red">Shouldn't be empty!</p>
   </div>
   <div class="mb-3">
     <label for="side" class="form-label">Choose Side</label>

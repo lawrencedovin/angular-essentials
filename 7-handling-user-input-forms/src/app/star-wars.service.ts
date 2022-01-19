@@ -31,4 +31,20 @@ export class StarWarsService {
     // Using logService
     this.logService.writeLog(`Changed side of: ${name}, new side: ${side}`);
   }
+
+  addCharacter(name: string, side: string) {
+    // {name: name, side: side}
+    const newCharacter = {name, side};
+
+    // Checking duplicates
+    const position = this.characters.findIndex((chararacter) => {
+      return chararacter.name === name;
+    })
+
+    // If it doesn't find a duplicate add the character
+    if(position === -1) {
+      // newCharacter.name !== '' ? this.characters.push(newCharacter) : alert('Error');
+    }
+
+  }
 }
