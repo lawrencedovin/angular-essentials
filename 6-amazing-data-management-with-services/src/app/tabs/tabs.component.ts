@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { StarWarsService } from '../star-wars.service';
+import { Person } from '../interfaces/person.interface';
 
 @Component({
   selector: 'app-tabs',
@@ -8,7 +9,7 @@ import { StarWarsService } from '../star-wars.service';
   providers: [StarWarsService]
 })
 export class TabsComponent {
-  characters: Array<{ name: string, side: string }> = [];
+  characters: Array<Person> = [];
   chosenList = 'all';
 
   constructor(private starWarsService: StarWarsService) {}

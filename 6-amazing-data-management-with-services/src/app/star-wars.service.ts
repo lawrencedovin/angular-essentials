@@ -20,3 +20,8 @@ export class StarWarsService {
     this.characters[position].side = characterInformation.side;
   }
 }
+
+export interface Person {
+  name: string;
+  side: string;
+}
