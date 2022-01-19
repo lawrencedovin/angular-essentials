@@ -1,11 +1,11 @@
-<form>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
   <div class="mb-3">
     <label for="name" class="form-label">Character Name</label>
-    <input class="form-control" type="text" id="name" name="name">
+    <input class="form-control" type="text" id="name" name="name" ngModel>
   </div>
   <div class="mb-3">
     <label for="side" class="form-label">Choose Side</label>
-    <select id="side" name="side" class="form-select">
+    <select id="side" name="side" class="form-select" ngModel>
       <option *ngFor="let side of availableSides" [value]="side.value">
         {{ side.display }}
       </option>
