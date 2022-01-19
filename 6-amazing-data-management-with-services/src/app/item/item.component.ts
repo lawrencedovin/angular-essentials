@@ -5,8 +5,7 @@ import { Person } from '../interfaces/person.interface';
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css'],
-  providers: [StarWarsService]
+  styleUrls: ['./item.component.css']
 })
 export class ItemComponent{
 

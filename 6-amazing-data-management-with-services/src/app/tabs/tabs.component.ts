@@ -5,8 +5,7 @@ import { Person } from '../interfaces/person.interface';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.css'],
-  providers: [StarWarsService]
+  styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent {
   characters: Array<Person> = [];
