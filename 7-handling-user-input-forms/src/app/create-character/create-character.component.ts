@@ -15,8 +15,6 @@ export class CreateCharacterComponent implements OnInit {
     {display: 'Dark', value: 'dark'}
   ]
 
-  isFormInvalid: boolean;
-
   constructor(private starWarsService: StarWarsService) { }
 
   ngOnInit(): void {}
@@ -26,14 +24,9 @@ export class CreateCharacterComponent implements OnInit {
 
     let {name, side} = submittedForm.value;
 
-    if(submittedForm.invalid) {
-      this.isFormInvalid = true;
-      return;
-    }
-    else {
-      this.isFormInvalid = false;
-      this.starWarsService.addCharacter(name, side);
-    }
+    if(submittedForm.invalid) return;
+    this.starWarsService.addCharacter(name, side);
+
   }
 
 

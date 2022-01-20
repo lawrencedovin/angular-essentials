@@ -44,6 +44,7 @@ export class StarWarsService {
     // If it doesn't find a duplicate add the character
     if(position === -1) {
       // newCharacter.name !== '' ? this.characters.push(newCharacter) : alert('Error');
+      this.characters.push(newCharacter)
     }
 
   }
