@@ -22,7 +22,6 @@ export class ListComponent implements OnInit, OnDestroy{
 
   // Executes whenever this component is created
   ngOnInit() {
-    this.starWarsService.fetchCharacters();
     this.activatedRoute.params.subscribe(
       // (params) is a function which receives the updated params which we can now handle
       // the (params) function will get executed evertime params changes
